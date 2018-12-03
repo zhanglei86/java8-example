@@ -23,7 +23,6 @@
     </properties>
 
     <dependencies>
-
         <!-- common -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -78,7 +77,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
