@@ -12,7 +12,6 @@ public class TimeConstant {
     // 时区
     @Deprecated
     public static final ZoneId DEFAULT_ZONEID_OLD = TimeZone.getDefault().toZoneId();
-
     public static final ZoneId DEFAULT_ZONEID = ZoneId.systemDefault();
     public static final ZoneId ZONEID_CTT = ZoneId.of("Asia/Shanghai");
     public static final ZoneId ZONEID_NEWYORK = ZoneId.of("America/New_York");
