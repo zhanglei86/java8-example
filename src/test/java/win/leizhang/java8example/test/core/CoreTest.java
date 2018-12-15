@@ -12,4 +12,5 @@ public class CoreTest {
         int availProcessors = Runtime.getRuntime().availableProcessors();
         System.out.println("avail processors count:" + availProcessors);
     }
+
 }
