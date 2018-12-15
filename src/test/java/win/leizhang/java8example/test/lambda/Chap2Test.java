@@ -7,7 +7,7 @@ import win.leizhang.java8example.bo.ApplePredicate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static win.leizhang.java8example.test.lambda.Chap1Test.inventory;
+import static win.leizhang.java8example.bo.Apple.inventory;
 
 /**
  * Created by zealous on 2018/12/15.

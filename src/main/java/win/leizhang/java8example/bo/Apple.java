@@ -1,5 +1,8 @@
 package win.leizhang.java8example.bo;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by zealous on 2018/12/15.
  */
@@ -34,4 +37,10 @@ public class Apple {
                 ", weight=" + weight +
                 '}';
     }
+
+    public static List<Apple> inventory = Arrays.asList(
+            new Apple(80, "green"),
+            new Apple(155, "green"),
+            new Apple(120, "red")
+    );
 }
