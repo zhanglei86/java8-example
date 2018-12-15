@@ -15,7 +15,7 @@ import static win.leizhang.java8example.constant.TimeConstant.*;
  * <p>官方给出的解释:simple beautiful strong immutable thread-safe.</p>
  * Created by zealous on 2018/6/21.
  */
-public class TestBase {
+public class TimeBaseTest {
 
     /**
      * 参考

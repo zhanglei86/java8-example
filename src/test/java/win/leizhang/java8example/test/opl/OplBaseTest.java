@@ -8,7 +8,7 @@ import java.util.Optional;
 /**
  * Created by zealous on 2018/12/5.
  */
-public class TestBase {
+public class OplBaseTest {
 
     @Test
     public void test1() {

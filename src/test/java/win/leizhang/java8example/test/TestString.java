@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 /**
  * Created by zealous on 2018/11/22.
  */
+@Deprecated
 public class TestString {
 
     @Test

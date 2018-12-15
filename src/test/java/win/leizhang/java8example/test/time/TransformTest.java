@@ -13,7 +13,7 @@ import static win.leizhang.java8example.constant.TimeConstant.DEFAULT_ZONEID;
  * 转换
  * Created by zealous on 2018/12/3.
  */
-public class TestTransform {
+public class TransformTest {
 
     @Test
     public void testLdtAndDate() {
