@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -151,6 +152,20 @@ public class TimeBaseTest {
         Duration du3 = Duration.between(lt2, lt3);
         Duration du4 = Duration.between(lt1, lt3);
         Duration du5 = Duration.between(lt1, nowTime);
+
+        System.out.println("ok");
+    }
+
+    @Test
+    public void test1() {
+        LocalDate now = LocalDate.now();
+        // 开始
+        LocalDate start = now.plusDays(10);
+        if (now.with(TemporalAdjusters.firstDayOfMonth()).equals(start.with(TemporalAdjusters.firstDayOfMonth()))) {
+            System.out.println("ok1");
+        } else {
+            System.out.println("ok2");
+        }
 
         System.out.println("ok");
     }

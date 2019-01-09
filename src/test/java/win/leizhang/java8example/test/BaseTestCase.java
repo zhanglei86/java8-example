@@ -20,7 +20,7 @@ public class BaseTestCase {
     private long endTime;
 
     static {
-        System.setProperty("crtCurrentAppName", "java8-example-testCase");
+        System.setProperty("currentAppName", "java8-example-testCase");
         // server端口
         System.setProperty("server.port", "9092");
     }
