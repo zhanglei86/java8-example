@@ -1,4 +1,4 @@
-package win.leizhang.java8example.test;
+package win.leizhang.java8example.typical;
 
 import org.junit.Test;
 

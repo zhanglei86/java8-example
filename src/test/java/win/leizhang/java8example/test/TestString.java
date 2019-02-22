@@ -16,12 +16,23 @@ public class TestString {
 
         Collections cls;
         Collection<List> cl;
-
         Stream<List> stream;
-
         System.out.println("lambda");
 
+        List<String> list = Arrays.asList("dddd", "bb", "ccc", "a");
+        list.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.length() - o2.length();
+            }
+        });
+        list.sort((str1, str2) -> (str2.length() - str1.length()));
 
+        System.out.println("ok");
+    }
+
+    @Test
+    public void test2() {
         Thread td = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -33,16 +44,5 @@ public class TestString {
         Thread td2 = new Thread(() -> System.out.println("run==>t2"));
         td2.start();
 
-        List<String> list = Arrays.asList("dddd", "bb", "ccc", "a");
-        list.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.length() - o2.length();
-            }
-        });
-
-        list.sort((str1, str2) -> (str2.length() - str1.length()));
-
-        System.out.println("ok");
     }
 }
