@@ -1,5 +1,7 @@
 package win.leizhang.java8example.test;
 
+import com.alibaba.fastjson.JSON;
+import org.apache.commons.lang3.RandomUtils;
 import org.junit.Test;
 
 import java.util.*;
@@ -12,7 +14,16 @@ import java.util.stream.Stream;
 public class TestString {
 
     @Test
+    public void testJson() {
+        String str = JSON.toJSONString(null);
+        System.out.println(str);
+    }
+
+    @Test
     public void test1() {
+        String codeInt = RandomUtils.nextInt(100, 200) + "";
+        double codeDouble = RandomUtils.nextDouble();
+        long codeLong = RandomUtils.nextLong();
 
         Collections cls;
         Collection<List> cl;
@@ -43,6 +54,26 @@ public class TestString {
 
         Thread td2 = new Thread(() -> System.out.println("run==>t2"));
         td2.start();
+    }
 
+
+    @Test
+    public void testHelloWeird() {
+        // 另类表达
+        System.out.println(randomString(-229985452) + " " + randomString(-147909649));
+    }
+
+    private static String randomString(int i) {
+        Random ran = new Random(i);
+        StringBuilder sb = new StringBuilder();
+        while (true) {
+            int k = ran.nextInt(27);
+            if (k == 0)
+                break;
+
+            sb.append((char) ('`' + k));
+        }
+
+        return sb.toString();
     }
 }
