@@ -76,4 +76,18 @@ public class OperatorsTest {
 
         System.out.println("ok");
     }
+
+    /**
+     * 其他用途，校验和最大长度？
+     */
+    @Test
+    public void testMaxLength() {
+        int op1 = 4;
+        int op2 = 35;
+        int op3 = 288;
+
+        int oper1 = op1 & 0x1f;
+        int oper2 = op3 & 0x3f;//FIXME 大于的话，有问题
+        System.out.println("ok");
+    }
 }
