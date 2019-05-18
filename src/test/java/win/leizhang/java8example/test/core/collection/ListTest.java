@@ -3,6 +3,7 @@ package win.leizhang.java8example.test.core.collection;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -69,6 +70,24 @@ public class ListTest {
         for (int i = 0; i < list1.size(); i++) {
             System.out.println("item" + i + ":" + list1.get(i));
         }
+
+        System.out.println("ok");
+    }
+
+    /**
+     * 查询
+     * 参考 -[如何快速从 List 中查找一条数据，小小心得](https://blog.csdn.net/weixin_41769621/article/details/84894641) 2018年12月08日 17:14:35 cqy麒
+     */
+    @Test
+    public void test1() {
+        List<String> list = Arrays.asList("苹果", "水果", "apple", "mac", "iphone", "ipad");
+        String str1 = list.get(2);
+        int str2 = list.indexOf("mac");
+        boolean flag = list.contains("itunes");
+        //list.stream().reduce(xx);
+
+        list.remove(5);
+        list.remove("mac");
 
         System.out.println("ok");
     }
