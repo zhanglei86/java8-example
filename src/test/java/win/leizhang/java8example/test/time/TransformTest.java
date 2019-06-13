@@ -3,6 +3,7 @@ package win.leizhang.java8example.test.time;
 import org.junit.Test;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -31,6 +32,24 @@ public class TransformTest {
         Instant instant2 = date2.toInstant();
         LocalDateTime ldtDate = instant2.atZone(DEFAULT_ZONEID).toLocalDateTime();
         System.out.println("ldt: " + ldtDate);
+    }
+
+    @Test
+    public void testLdAndDate() {
+        // LocalDate -> Date
+        LocalDate ld1 = LocalDate.now();
+
+        Instant instant1 = ld1.atStartOfDay().atZone(DEFAULT_ZONEID).toInstant();
+        Date date1 = Date.from(instant1);
+        System.out.println("date: " + date1);
+
+
+        // Date -> LocalDate
+        Date date2 = new Date();
+
+        Instant instant2 = date2.toInstant();
+        LocalDate ldDate = instant2.atZone(DEFAULT_ZONEID).toLocalDate();
+        System.out.println("ld: " + ldDate);
     }
 
     @Test

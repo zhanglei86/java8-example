@@ -16,6 +16,10 @@ public class TestString {
     @Test
     public void testJson() {
         String str = JSON.toJSONString(null);
+
+        String str2 = "{\"userId\":100,\"userName\":\"xx\"}";
+        List<Object> list = JSON.parseArray("[" + str2 + "]", Object.class);
+
         System.out.println(str);
     }
 
