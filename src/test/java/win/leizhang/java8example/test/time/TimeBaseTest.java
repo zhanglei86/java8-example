@@ -107,9 +107,12 @@ public class TimeBaseTest {
         Instant ist6 = Clock.systemDefaultZone().instant();
         Instant ist7 = Clock.systemUTC().instant();
 
+        //时间戳，可以给前端
         long t1 = System.currentTimeMillis();
         long t2 = Instant.now().toEpochMilli();
-        long t3 = Instant.now().getEpochSecond();
+        long t3 = LocalDateTime.now().toInstant(ZoneOffset.of("+8")).toEpochMilli();
+        long t4 = ist3.toEpochMilli();
+        long t5 = Instant.now().getEpochSecond();
         int nano = Instant.now().getNano();
 
         // 持续时间
