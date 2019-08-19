@@ -1,6 +1,7 @@
 package win.leizhang.java8example.test;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.RandomUtils;
 import org.junit.Test;
 
@@ -15,10 +16,34 @@ public class TestString {
 
     @Test
     public void testJson() {
+        // 空
         String str = JSON.toJSONString(null);
 
+        // 数组
         String str2 = "{\"userId\":100,\"userName\":\"xx\"}";
         List<Object> list = JSON.parseArray("[" + str2 + "]", Object.class);
+
+        // 版本差异
+        Map<String, Object> as = new HashMap<>();
+        Map<String, Object> as1 = new HashMap<>();
+        Map<String, Object> as2 = new HashMap<>();
+        Map<String, Object> as3 = new HashMap<>();
+        as.put("a", "1111");
+        as.put("a2", "1111");
+        as.put("a3", "1111");
+        as.put("a4", as2);
+        as2.put("a2", "1111");
+        as2.put("a3", "1111");
+        as2.put("a4", as3);
+        as3.put("a2", "1111");
+        as3.put("a3", "1111");
+        as3.put("a4", "1111");
+        as1.put("b", as);
+        JSONObject b2 = new JSONObject(as);
+        System.out.println(">>>>" + b2.getJSONObject("a4").getString("a4"));
+        //不同的版本输入信息如下：
+        //1.2.29： >>>>{"a2":"1111","a3":"1111","a4":"1111"}
+        //1.2.58：>>>>{a2=1111, a3=1111, a4=1111}
 
         System.out.println(str);
     }
