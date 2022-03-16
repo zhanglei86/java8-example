@@ -139,7 +139,7 @@ public class TimeBaseTest {
         long diff3 = ChronoUnit.WEEKS.between(birthDate, now);
         long diff4 = ChronoUnit.DAYS.between(birthDate, now);
         long diff42 = nowDate.toEpochDay() - birthDate.toEpochDay();
-
+        long diff43 = birthDate.until(nowDate, ChronoUnit.DAYS);
 
         // 日以下，毫秒级别
         Instant ist1 = ist.plus(Duration.ofSeconds(600));

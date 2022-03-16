@@ -1,3 +1,4 @@
+/*
 package win.leizhang.java8example.typical;
 
 import com.google.zxing.BarcodeFormat;
@@ -15,11 +16,13 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
+*/
 /**
  * 生成二维码
  * 参考：[Java骚操作--生成二维码](https://www.cnblogs.com/lsy131479/p/8808172.html) 2018-05-14 20:40 房上的猫
  * Created by zealous on 2019-05-18.
- */
+ *//*
+
 public class QrCodeTest {
 
     @Test
@@ -54,3 +57,4 @@ public class QrCodeTest {
     }
 
 }
+*/
